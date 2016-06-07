@@ -1,3 +1,5 @@
-pubSub\RedisMessageListener.class
+pubSub\RedisService.class
 pubSub\PubSub.class
-pubSub\DummyService.class
+pubSub\RedisMessageListener.class
+pubSub\RedisPublisherService.class
+pubSub\MyRedisSentinelConfiguration.class

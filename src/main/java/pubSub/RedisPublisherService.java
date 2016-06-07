@@ -34,7 +34,9 @@ public class RedisPublisherService {
     	Date date = new Date();
     	String currentDate = dateFormat.format(date); //2014/08/06 15:59:48    	
     	
-        template.convertAndSend( topic.getTopic(), "Message " + message + " " + counter.incrementAndGet() + 
-            " at " + currentDate + ", " + Thread.currentThread().getName() );
+        template.convertAndSend( topic.getTopic(), "Message " + message + 
+                " at " + currentDate + ", " + Thread.currentThread().getName() );
+//        template.convertAndSend( topic.getTopic(), "Message " + message + " " + counter.incrementAndGet() + 
+//            " at " + currentDate + ", " + Thread.currentThread().getName() );
  }
 }

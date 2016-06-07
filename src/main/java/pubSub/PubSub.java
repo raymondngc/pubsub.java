@@ -29,10 +29,11 @@ public class PubSub {
 
 		for (int i = 0; i < 1000; ++i) {
 			try {
-				redisPublisherService.publish("testing");
+				redisPublisherService.publish("testing " + i);
+				System.out.println ("Message " + i + " is just published ..." );
 				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
+//			} catch (InterruptedException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
